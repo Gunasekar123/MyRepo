@@ -1,19 +1,19 @@
-public class AnnonymusInner extends Thread{
+public class AnnonymusInner{
      public static void main(String []args){
         AnnonymusInner h=new AnnonymusInner();
-       Thread t1=new Thread(h){
+       Thread t1=new Thread(){
            public void run(){
              System.out.println("This is t1 thread"); 
              h.multiply(5);
            }
        };
-         Thread t2=new Thread(h){
+         Thread t2=new Thread(){
            public void run(){
              System.out.println("This is t2 thread");  
              h.multiply(6);
            }
        };
-         Thread t3=new Thread(h){
+         Thread t3=new Thread(){
            public void run(){
              System.out.println("This is t3 thread");  
              h.multiply(7);
