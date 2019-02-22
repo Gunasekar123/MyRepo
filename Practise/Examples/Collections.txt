@@ -64,7 +64,8 @@ Deque interface extends the Queue interface. In Deque, we can remove and add the
 
 ArrayDeque:
 1.ArrayDeque is faster than ArrayList and Stack and has no capacity restrictions.
-
+2.Null elements are not allowed in the ArrayDeque.
+3.
 
 
 Set : Interface
@@ -72,14 +73,18 @@ Not allows duplicate values
 
 HashSet :
 1.Not alloes duplicate values
-2.
-3.
-4.
+2.HashSet is the best approach for search operations.
+3.HashSet contains unique elements only.
+4.HashSet allows null value.
+5.HashSet class is non synchronized.
+6.HashSet doesn't maintain the insertion order. 
 
 LinkedHasSet : LinkedHashSet class represents the LinkedList implementation of Set Interface.
 1.Not alloes duplicate values
 2.It maintains the insertion order 
 3.permits null elements.
+4.LinkedHashSet class is non synchronized.
+5.maintain the insertion order. 
 
 SortedSet : Interface
 SortedSet is the alternate of Set interface that provides a total ordering on its elements. The elements of the SortedSet are arranged in the increasing (ascending) order.
@@ -88,5 +93,8 @@ TreeSet ;
 1.Like HashSet, TreeSet also contains unique elements. 
 2.However, the access and retrieval time of TreeSet is quite fast. 
 3.The elements in TreeSet stored in ascending order.
+4.non synchronized.
+5. maintains ascending order.
+6.
 
 
