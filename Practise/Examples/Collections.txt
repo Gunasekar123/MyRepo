@@ -1,0 +1,5 @@
+1.Null keys 
+2.Null values
+3.order 
+4.synchronized
+5.Purpose of use
