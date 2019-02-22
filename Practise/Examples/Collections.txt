@@ -3,3 +3,6 @@
 3.order 
 4.synchronized
 5.Purpose of use
+6.purpose of collection
+7.aading and removing
+8.Accessing elements 
