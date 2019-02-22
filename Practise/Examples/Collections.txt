@@ -6,3 +6,87 @@
 6.purpose of collection
 7.aading and removing
 8.Accessing elements 
+
+
+List : Interface
+
+Implemented classes :
+1.ArrayList
+2.LinkedList
+3.Vector
+
+
+Set : Interface  sub interfaces :SortedSet implements TreeSet
+
+Implementeds Classes:
+1.HasSet
+2.LinkedHasSet
+
+Iterator : Interface
+
+ArrayList :
+1.Allows duplicates values 
+2.Maintains insertion order
+3.Non-synchronized 
+4.Access is very easy (Because index based retrival )
+5.Adding and removal is slow
+6.It is usefull when we want achive retrival fast
+7.Uses dynamic array to store duplicate elements
+
+LinkedList :
+1.Allows duplicate elements 
+2.Maintains insertion order
+3.Non-synchronized
+4.Insertion and deletion is fast 
+5.Retrival is slow 
+6.	LinkedList internally uses a doubly linked list to store the elements.
+
+Vector :
+1.It is same as ArrayList 
+2.Only difference is synchronized 
+
+
+Queue : Interface
+
+Queue interface maintains the first-in-first-out order. It can be defined as an ordered list that is used to hold the elements which are about to be processed. There are various classes like PriorityQueue, Deque, and ArrayDeque which implements the Queue interface.
+
+PriorityQueue :
+1.Does not allow null values
+Methods :
+1.queue.element() --gives the head elelment
+2.queue.peek()--gives peak elelment
+3.queue.remove()-- removes and returns head of the quee , throws no such a element exception if there is no element
+4.queue.poll() . --It returns null if the queue is empty. 
+
+Deque :Interface
+
+Deque interface extends the Queue interface. In Deque, we can remove and add the elements from both the side. Deque stands for a double-ended queue which enables us to perform the operations at both the ends.
+
+ArrayDeque:
+1.ArrayDeque is faster than ArrayList and Stack and has no capacity restrictions.
+
+
+
+Set : Interface
+Not allows duplicate values
+
+HashSet :
+1.Not alloes duplicate values
+2.
+3.
+4.
+
+LinkedHasSet : LinkedHashSet class represents the LinkedList implementation of Set Interface.
+1.Not alloes duplicate values
+2.It maintains the insertion order 
+3.permits null elements.
+
+SortedSet : Interface
+SortedSet is the alternate of Set interface that provides a total ordering on its elements. The elements of the SortedSet are arranged in the increasing (ascending) order.
+
+TreeSet ;
+1.Like HashSet, TreeSet also contains unique elements. 
+2.However, the access and retrieval time of TreeSet is quite fast. 
+3.The elements in TreeSet stored in ascending order.
+
+
