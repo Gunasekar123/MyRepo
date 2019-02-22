@@ -1,0 +1,169 @@
+Q:Can Java thread object invoke start method twice?
+
+A:  No, it throws IllegalThreadStateException
+
+Q: Give the list of Java Object class methods. ?
+
+A:	clone() - Creates and returns a copy of this object.
+	equals() - Indicates whether some other object is "equal to" this one.
+	finalize() - Called by the garbage collector on an object when garbage collection
+			determines that there are no more references to the object.
+	getClass() - Returns the runtime class of an object.
+	hashCode() - Returns a hash code value for the object.
+	notify() - Wakes up a single thread that is waiting on this object's monitor.
+	notifyAll() - Wakes up all threads that are waiting on this object's monitor.
+	toString() - Returns a string representation of the object.
+	wait() - Causes current thread to wait until another thread invokes the notify() method
+			or the notifyAll() method for this object.
+      
+ Q: All Objects are eligible for clone ?
+ 
+ A:
+ 
+ Q:Can we override static method?
+ 
+A: We cannot override static methods. Static methods are belogs to class, not belongs
+to object. Inheritance will not be applicable for class members
+
+Q: Can you list serialization methods?
+A: Serialization interface does not have any methods. It is a marker interface.
+It just tells that your class can be serializable.
+
+Q:What is the difference between super() and this()?
+A:super() is used to call super class constructor, whereas this() used to call
+constructors in the same class, means to call parameterized constructors.
+
+Q:How to prevent a method from being overridden?
+A:By specifying final keyword to the method you can avoid overriding
+in a subcalss. Similarlly one can use final at class level to
+prevent creating subclasses.
+
+Q:Can we create abstract classes without any abstract methods?
+A:Yes
+
+Q:What is transient variable?
+Transient variables cannot be serialized. During serialization process,
+transient variable states will not be serialized. State of the value will
+be always defaulted after deserialization.
+
+Q: Incase, there is a return at the end of try block, will execute finally block?
+A:Yes, the finally block will be executed even after writing return statement
+at the end fo try block. It returns after executing finally block.
+
+Q:When to use LinkedList or ArrayList?
+A:1.Accessing elements are faster with ArrayList, because it is index based.
+But accessing is difficult with LinkedList. It is slow access
+2.insertion and deletion is much faster with LinkedList 
+But slow in Array list
+
+Q:What is daemon thread?
+A:Daemon thread is a low priority thread. It runs intermittently
+in the back ground, and takes care of the garbage collection
+operation for the java runtime system. By calling setDaemon()
+method is used to create a daemon thread.
+
+Q:Does each thread in java uses seperate stack?
+A:In Java every thread maintains its own separate stack. It is
+called Runtime Stack but they share the same memory.
+
+Q:What is the difference between Enumeration and Iterator?
+A:The functionality of Enumeration and the Iterator are same. You can get remove() 
+from Iterator to remove an element, while Enumeration does not have remove()
+method. Using Enumeration you can only traverse and fetch the objects, where as using
+Iterator we can also add and remove the objects. So Iterator can be useful if you want
+to manipulate the list and Enumeration is for read-only access.
+
+Q:What is fail-fast in java?
+A:A fail-fast system is nothing but immediately report any failure that
+is likely to lead to failure. When a problem occurs, a fail-fast system
+fails immediately. In Java, we can find this behavior with iterators.
+Incase, you have called iterator on a collection object, and another
+thread tries to modify the collection object, then concurrent modification
+exception will be thrown. This is called fail-fast.
+
+Q:What is final, finally and finalize?
+A:final:
+	final is a keyword. The variable decleared as final should be
+	initialized only once and cannot be changed. Java classes
+	declared as final cannot be extended. Methods declared as final
+	cannot be overridden.
+	
+finally:
+	finally is a block. The finally block always executes when the
+	try block exits. This ensures that the finally block is executed
+	even if an unexpected exception occurs. But finally is useful for
+	more than just exception handling - it allows the programmer to
+	avoid having cleanup code accidentally bypassed by a return,
+	continue, or break. Putting cleanup code in a finally block is
+	always a good practice, even when no exceptions are anticipated.
+	
+finalize:
+	finalize is a method. Before an object is garbage collected, the
+	runtime system calls its finalize() method. You can write system
+	resources release code in finalize() method before getting garbage
+	collected.
+  
+Q: What is the purpose of garbage collection?
+A:The garbage collection process is to identify the objects which are
+no longer referenced or needed by a program so that their resources can be
+reclaimed and reused. These identified objects will be discarded
+
+Q: What is difference between wait and sleep methods in java?
+A:sleep():
+	It is a static method on Thread class. It makes the current thread into the
+	"Not Runnable" state for specified amount of time. During this time, the thread
+	keeps the lock (monitors) it has acquired.
+	
+wait():
+	It is a method on Object class. It makes the current thread into the "Not Runnable"
+	state. Wait is called on a object, not a thread. Before calling wait() method, the
+	object should be synchronized, means the object should be inside synchronized block.
+	The call to wait() releases the acquired lock.
+  
+Q: What is race condition?
+A:A race condition is a situation in which two or more threads or
+processes are reading or writing some shared data, and the final
+result depends on the timing of how the threads are scheduled.
+Race conditions can lead to unpredictable results and subtle
+program bugs. A thread can prevent this from happening by locking
+an object. When an object is locked by one thread and another
+thread tries to call a synchronized method on the same object,
+the second thread will block until the object is unlocked.
+
+Q:How can you convert Map to List?
+A:public static void main(String a[]){
+	Map<String, String> wordMap = new HashMap<String, String>();
+	Set<Entry<String, String>> set = wordMap.entrySet();
+	List<Entry<String, String>> list = new ArrayList<Entry<String, String>>(set);
+}
+
+Q:What is wrapper class in java?
+A:Everything in java is an object, except primitives. Primitives are
+int, short, long, boolean, etc. Since they are not objects, they cannot
+return as objects, and collection of objects. To support this, java provides
+wrapper classes to move primitives to objects. Some of the wrapper classes
+are Integer, Long, Boolean, etc.
+
+Q:What is the super class for Exception and Error?
+A:The super class or base class for Exception and Error is Throwable.
+
+Q: Can we initialise uninitialized final variable?
+A:Yes. We can initialise blank final variable in constructor, only in construtor.
+The condition here is the final variable should be non-static.
+
+Q:Can non-static member classes (Local classes) have static members?
+A:No, non-static member classes cannot have Astatic members. Because,
+an instance of a non-static member class or local class must be
+created in the context of an instance of the enclosing class. You
+can declare constants, means static final variables.
+
+Q: Can you serialize static fields of a class?
+A:Since static fields are not part of object state, they are part of class, serialization ignores the static fields.
+
+Q;Where can we use serialization?
+A:Whenever an object has to sent over the network, those objects should be serialized. 
+Also if the state of an object is to be saved, objects need to be serilazed.
+
+Q:What is the difference between static synchronized and synchronized methods?
+A:
+
