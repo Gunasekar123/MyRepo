@@ -77,13 +77,19 @@ HashSet :
 3.HashSet contains unique elements only.
 4.HashSet allows null value.
 5.HashSet class is non synchronized.
-6.HashSet doesn't maintain the insertion order. 
+But we cqn achive synchronization using below 
+Set s = Collections.synchronizedSet(new HashSet(...));
+6.HashSet doesn't maintain the insertion order.
+Do not guarantee that the order of their elements
+ source code of HashSet then you may find that it is backed up by a HashMap
 
 LinkedHasSet : LinkedHashSet class represents the LinkedList implementation of Set Interface.
 1.Not alloes duplicate values
 2.It maintains the insertion order 
 3.permits null elements.
 4.LinkedHashSet class is non synchronized.
+But we cqn achive synchronization using below 
+ Collections.synchronizedSet(new LinkedHashSet())
 5.maintain the insertion order. 
 
 SortedSet : Interface
